@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="POISearchDemoViewController">
+            <connections>
+                <outlet property="_keyText" destination="GR8-4k-tZF" id="o2x-cV-lNG"/>
+                <outlet property="_nextPageButton" destination="mCe-ut-DJg" id="RSM-T2-eyL"/>
+                <outlet property="keyText" destination="GR8-4k-tZF" id="bhd-1f-2AV"/>
+                <outlet property="nextPage" destination="mCe-ut-DJg" id="9rR-H4-H50"/>
+                <outlet property="nextPageButton" destination="mCe-ut-DJg" id="ab3-oS-J5j"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7LK-ey-rmD">
+                    <rect key="frame" x="114" y="48" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.37496316600000001" green="1" blue="0.34798639450000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="bw8-ly-x7H"/>
+                    </constraints>
+                    <state key="normal" title="开始">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="startSearch:" destination="-1" eventType="touchUpInside" id="zob-ZF-hXu"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关键字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ex6-d7-JsP">
+                    <rect key="frame" x="37" y="16" width="51" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GR8-4k-tZF">
+                    <rect key="frame" x="114" y="16" width="194" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCe-ut-DJg">
+                    <rect key="frame" x="241" y="48" width="67" height="30"/>
+                    <color key="backgroundColor" red="0.37496316600000001" green="1" blue="0.34798639450000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="NextPage">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="GR8-4k-tZF" firstAttribute="top" secondItem="ex6-d7-JsP" secondAttribute="top" id="1EX-dw-aO5"/>
+                <constraint firstItem="mCe-ut-DJg" firstAttribute="leading" secondItem="7LK-ey-rmD" secondAttribute="trailing" constant="81" id="7gs-PW-KGq"/>
+                <constraint firstItem="ex6-d7-JsP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="16" id="FAl-7B-LSD"/>
+                <constraint firstItem="GR8-4k-tZF" firstAttribute="leading" secondItem="7LK-ey-rmD" secondAttribute="leading" id="IKr-av-Hnc"/>
+                <constraint firstItem="ex6-d7-JsP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="37" id="J4D-dc-rTM"/>
+                <constraint firstItem="GR8-4k-tZF" firstAttribute="leading" secondItem="ex6-d7-JsP" secondAttribute="trailing" constant="26" id="fj0-dR-kCA"/>
+                <constraint firstItem="mCe-ut-DJg" firstAttribute="trailing" secondItem="GR8-4k-tZF" secondAttribute="trailing" id="jMH-db-vsD"/>
+                <constraint firstItem="mCe-ut-DJg" firstAttribute="baseline" secondItem="7LK-ey-rmD" secondAttribute="baseline" id="kpb-u7-O3Y"/>
+                <constraint firstItem="7LK-ey-rmD" firstAttribute="top" secondItem="GR8-4k-tZF" secondAttribute="bottom" constant="2" id="y1V-4J-2yp"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="-209.5" y="203.5"/>
+        </view>
+    </objects>
+</document>
